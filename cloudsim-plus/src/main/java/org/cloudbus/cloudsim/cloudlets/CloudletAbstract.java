@@ -312,6 +312,18 @@ public abstract class CloudletAbstract extends CustomerEntityAbstract implements
     }
 
     @Override
+    public double getTotalWaitingTime() {
+        if (datacenterExecutionList.isEmpty()) {
+            return 0;
+        }
+
+        // use the latest resource submission time
+        double original_waiting_time = this.getWaitingTime();
+        final double subTime = getLastExecutionInDatacenterInfo().getArrivalTime();
+        return execStartTime - subTime;
+    }
+
+    @Override
     public int getPriority() {
         return priority;
     }

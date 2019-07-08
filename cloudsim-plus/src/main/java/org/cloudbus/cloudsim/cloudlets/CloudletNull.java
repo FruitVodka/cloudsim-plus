@@ -20,6 +20,7 @@ import java.util.List;
  * @see Cloudlet#NULL
  */
 final class CloudletNull implements Cloudlet {
+    @Override public double getTotalWaitingTime(){ return 0.0; }
     @Override public void setId(long id) {/**/}
     @Override public long getId() {
         return -1;

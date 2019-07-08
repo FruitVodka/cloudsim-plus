@@ -505,6 +505,9 @@ public interface Cloudlet extends UniquelyIdentifiable, Comparable<Cloudlet>, Cu
      */
     double getWaitingTime();
 
+    /** Total Waiting Time */
+    double getTotalWaitingTime();
+
     /**
      * Checks whether this Cloudlet has finished executing or not.
      *
