@@ -36,7 +36,7 @@ import java.util.List;
  * @author Manoel Campos da Silva Filho
  * @see VmToHostMappingHeuristic#NULL
  */
-final class VmToHostMappingHeuristicNull2 extends HeuristicNull<VmToHostMappingSolution> implements VmToHostMappingHeuristic {
+final class VmToHostMappingHeuristicNull extends HeuristicNull<VmToHostMappingSolution> implements VmToHostMappingHeuristic {
     @Override public List<Vm> getVmList() { return Collections.EMPTY_LIST; }
     @Override public List<Host> getHostList() { return Collections.EMPTY_LIST; }
     @Override public void setVmList(List<Vm> vmList) {/**/}
